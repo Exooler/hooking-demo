@@ -2,12 +2,6 @@
 
 Windows x64 educational inline hook, written in C++ and MASM. No hooking library.
 
-## Run
-
-Keep `bin/target.exe` and `bin/hook.dll` together. Run `target.exe` and press Enter between stages. For an uninterrupted verification, run `target.exe --auto`.
-
-Expected results: **6 before, 16 during, 6 after**. Each stage prints the function's actual entry bytes. Installation prints target, detour, and trampoline addresses. The executable explicitly loads its sibling DLL with LoadLibraryW and calls InstallHook; there is no injection or separate controller program.
-
 ## Build
 
 Install Visual Studio C++ desktop build tools, open its **x64 Native Tools Command Prompt**, and run `build.cmd` in this folder. PDB files are included by the build for debugger exploration.
