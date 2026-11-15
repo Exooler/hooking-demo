@@ -12,7 +12,7 @@ Expected results: **6 before, 16 during, 6 after**. Each stage prints the functi
 
 Install Visual Studio C++ desktop build tools, open its **x64 Native Tools Command Prompt**, and run `build.cmd` in this folder. PDB files are included by the build for debugger exploration.
 
-## Code to show on camera
+## Code
 
 `target.asm` defines the original function:
 
@@ -34,7 +34,7 @@ The trampoline contains the original 14 NOPs followed by the same absolute jump 
 
 1. Show the original result and NOP bytes.
 2. Step through InstallHook: copy bytes, create trampoline, patch entry.
-3. Show the `FF 25` jump and changed result.
+3. Look at the `FF 25` jump and changed result.
 4. Step into HookedCalculate, then the trampoline, then the original body.
 5. Remove the hook and show the restored NOPs and original result.
 
